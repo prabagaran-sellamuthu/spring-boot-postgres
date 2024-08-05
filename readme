@@ -1,0 +1,19 @@
+# Switch to the PostgreSQL user
+sudo -i -u postgres
+
+# Access the PostgreSQL prompt
+psql
+
+# Create the database
+CREATE DATABASE testdb;
+
+# Create the user with password
+CREATE USER testuser WITH ENCRYPTED PASSWORD 'testpassword';
+
+# Grant privileges to the user on the database
+GRANT ALL PRIVILEGES ON DATABASE testdb TO testuser;
+
+# Exit the PostgreSQL prompt
+\q
+
+

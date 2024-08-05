@@ -1,0 +1,25 @@
+#
+POST http://localhost:8080/api/data HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "additionalInfo": {
+        "key": "exampleKey",
+        "value": "exampleValue",
+        "test": true,
+        "test1": false
+    }
+}
+
+### Update User Additional Info
+PUT http://localhost:8080/api/update/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "additionalInfo": {
+    "test": true,
+    "test1": true
+  }
+}
